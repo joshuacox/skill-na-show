@@ -19,7 +19,7 @@ from time import sleep
 
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
-from mycroft.audio import wait_while_speaking
+from mycroft.util import wait_while_speaking
 from mycroft.util.log import LOG
 try:
     from mycroft.skills.audioservice import AudioService
@@ -63,7 +63,7 @@ class NoAgendaSkill(MycroftSkill):
             self.stop()
 
             self.speak_dialog('NoAgenda')
-            sleep(0.3)
+            sleep(1.0)
             wait_while_speaking()
 
             url = data.enclosures[0]['url']
