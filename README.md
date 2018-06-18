@@ -13,5 +13,6 @@ Plays the latest No Agenda show from a configurable RSS based audio feed.
 * "I need pharma"
 
 ## Credits
-Mycroft AI
+based on the official news module from Mycroft AI
 joahuacox
+
