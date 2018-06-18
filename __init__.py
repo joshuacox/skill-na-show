@@ -19,7 +19,7 @@ from time import sleep
 
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
-from mycroft.util import wait_while_speaking
+from mycroft.audio import wait_while_speaking
 from mycroft.util.log import LOG
 try:
     from mycroft.skills.audioservice import AudioService
@@ -69,7 +69,6 @@ class NoAgendaSkill(MycroftSkill):
 
             # After the intro, start the no agenda stream
             # if audio service module is available use it
-            sleep(3.3)
             wait_while_speaking()
             if self.audioservice:
                 LOG.info('AudioService')
