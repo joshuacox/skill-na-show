@@ -1,0 +1,13 @@
+{
+  "utterance": "play news",
+  "intent_type": "handle_intent",
+  "intent": {
+    "Play": "play",
+    "News": "news"
+  },
+  "expected_data": {
+      "__type__": "mycroft.audio.service.play"
+  }
+}
+
+

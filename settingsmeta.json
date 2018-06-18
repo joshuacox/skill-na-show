@@ -1,0 +1,31 @@
+{
+ "name": "Mycroft No Agenda Player",
+ "skillMetadata": {
+        "sections": [
+            {
+                "name": "Configuration",
+                "fields": [
+                    {
+                        "type": "label",
+                        "label": "By default this skill reads the No Agenda news broadcast."
+                    },
+                    {
+                        "name": "pre_select",
+                        "type": "select",
+                        "label": "Options",
+                        "options": "Other URL (please define below)|not_set;NA|http://feed.nashownotes.com/rss.xml",
+                        "value": "http://feed.nashownotes.com/rss.xml"
+                    },
+                    {
+                        "name": "url_rss",
+                        "type": "text",
+                        "label": "No Agenda Feed url:",
+                        "value": ""
+                    }
+
+                ]
+            }
+        ]
+    }
+ 
+}
