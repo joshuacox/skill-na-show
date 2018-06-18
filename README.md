@@ -1,8 +1,8 @@
-## Hourly News
+## No Agenda Show
 Plays the latest No Agenda show
 
 ## Description
-Plays the latest No Agenda show from a configurable RSS based audio feed.
+Plays the latest No Agenda show using Mycroft AI
 
 ## Examples
 * "Play the nagenda show"
@@ -16,4 +16,4 @@ Plays the latest No Agenda show from a configurable RSS based audio feed.
 based on the official news module from Mycroft AI
 
 adapted by:
-joahuacox
+@joshuacox
