@@ -14,5 +14,6 @@ Plays the latest No Agenda show from a configurable RSS based audio feed.
 
 ## Credits
 based on the official news module from Mycroft AI
-joahuacox
 
+adapted by:
+joahuacox
