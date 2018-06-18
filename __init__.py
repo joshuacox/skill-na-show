@@ -15,6 +15,7 @@
 import feedparser
 # from os.path import dirname
 import re
+from time import sleep
 
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
@@ -62,6 +63,7 @@ class NoAgendaSkill(MycroftSkill):
             self.stop()
 
             self.speak_dialog('NoAgenda')
+            sleep(0.3)
             wait_while_speaking()
 
             url = data.enclosures[0]['url']
