@@ -57,20 +57,20 @@ class NoAgendaSkill(MycroftSkill):
     @intent_handler(IntentBuilder("").require("Play").require("NoAgenda"))
     def handle_intent(self, message):
         try:
-            feeddata = feedparser.parse(self.url_rss)
-            data = feeddata.entries[0]
-            # Stop anything already playing
             self.stop()
 
             self.speak_dialog('NoAgenda')
-            sleep(1.0)
-            wait_while_speaking()
+            feeddata = feedparser.parse(self.url_rss)
+            data = feeddata.entries[0]
+            # Stop anything already playing
 
             url = data.enclosures[0]['url']
             LOG.info(url)
 
             # After the intro, start the no agenda stream
             # if audio service module is available use it
+            sleep(1.0)
+            wait_while_speaking()
             if self.audioservice:
                 LOG.info('AudioService')
                 self.audioservice.play(url, message.data['utterance'])
