@@ -64,12 +64,11 @@ class NoAgendaSkill(MycroftSkill):
             self.speak_dialog('NoAgenda')
             wait_while_speaking()
 
-            # After the intro, start the no agenda stream
-            url = re.sub('https', 'http',
-                         #data['items'][0]['enclosure'][0]['url'])
-                data.enclosures[0]['url'])
-            # if audio service module is available use it
+            url = data.enclosures[0]['url'])
             LOG.info(url)
+
+            # After the intro, start the no agenda stream
+            # if audio service module is available use it
             if self.audioservice:
                 LOG.info('AudioService')
                 self.audioservice.play(url, message.data['utterance'])
