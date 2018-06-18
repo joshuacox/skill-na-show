@@ -64,7 +64,7 @@ class NoAgendaSkill(MycroftSkill):
             self.speak_dialog('NoAgenda')
             wait_while_speaking()
 
-            url = data.enclosures[0]['url'])
+            url = data.enclosures[0]['url']
             LOG.info(url)
 
             # After the intro, start the no agenda stream
