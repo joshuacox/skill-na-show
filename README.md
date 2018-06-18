@@ -11,6 +11,8 @@ Plays the latest No Agenda show using Mycroft AI
 * "My millenials, stay woke!"
 * "I need karma!"
 * "I need pharma!"
+* "Resist we much!"
+* "Build a wall!"
 
 ## Credits
 based on the official news module from Mycroft AI
