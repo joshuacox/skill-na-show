@@ -6,12 +6,13 @@ Plays the latest No Agenda show using Mycroft AI
 
 ## Examples
 * "Play the No Agenda show!"
-* "Play the best podcast in the universe!"
-* "Play a random No Agenda show!"
-* "Play the penultimate No Agenda show!"
-* "Play the third No Agenda show!"
+* "Start up the best podcast in the universe!"
+* "Initiate a random No Agenda show!"
+* "Fire up the penultimate No Agenda show!"
+* "Load the third No Agenda show!"
 * "In the morning!"
 * "What's the latest in gitmo nation?"
+* "What's the latest No Agenda show?"
 * "My millenials, stay woke!"
 * "I need karma!"
 * "I need pharma!"
