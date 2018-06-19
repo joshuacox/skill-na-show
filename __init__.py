@@ -85,6 +85,36 @@ class NoAgendaSkill(MycroftSkill):
         except Exception as e:
             LOG.error("Error: {0}".format(e))
 
+    @intent_handler(IntentBuilder("mymillenials").
+        require("mymillenials").
+        build())
+    def handle_mymillenials_intent(self, message):
+        try:
+            self.stop()
+
+            self.speak_dialog('NoAgenda')
+            feeddata = feedparser.parse(self.url_rss)
+            data = feeddata.entries[0]
+            # Stop anything already playing
+
+            url = data.enclosures[0]['url']
+            LOG.info('mymillenials')
+            LOG.info(url)
+
+            # After the intro, start the no agenda stream
+            # if audio service module is available use it
+            sleep(1.0)
+            wait_while_speaking()
+            if self.audioservice:
+                LOG.info('AudioService')
+                self.audioservice.play(url, message.data['utterance'])
+            else:  # othervice use normal mp3 playback
+                LOG.info('playmp3')
+                self.process = play_mp3(url)
+
+        except Exception as e:
+            LOG.error("Error: {0}".format(e))
+
     @intent_handler(IntentBuilder("buildawall").
         require("buildawall").
         build())
