@@ -69,6 +69,7 @@ class NoAgendaSkill(MycroftSkill):
 
             # After the intro, start the no agenda stream
             # if audio service module is available use it
+            sleep(1.0)
             wait_while_speaking()
             if self.audioservice:
                 LOG.info('AudioService')
