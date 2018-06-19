@@ -6,6 +6,7 @@ Plays the latest No Agenda show using Mycroft AI
 
 ## Examples
 * "Play the No Agenda show!"
+* "Play the penultimate No Agenda show!"
 * "In the morning!"
 * "What's the latest in gitmo nation?"
 * "My millenials, stay woke!"
