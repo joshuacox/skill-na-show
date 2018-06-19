@@ -54,6 +54,36 @@ class NoAgendaSkill(MycroftSkill):
 
         return url_rss
 
+    @intent_handler(IntentBuilder("anycollusion").
+        require("anycollusion").
+        build())
+    def handle_anycollusion_intent(self, message):
+        try:
+            self.stop()
+
+            self.speak_dialog('NoAgenda')
+            feeddata = feedparser.parse(self.url_rss)
+            data = feeddata.entries[0]
+            # Stop anything already playing
+
+            url = data.enclosures[0]['url']
+            LOG.info('anycollusion')
+            LOG.info(url)
+
+            # After the intro, start the no agenda stream
+            # if audio service module is available use it
+            sleep(1.0)
+            wait_while_speaking()
+            if self.audioservice:
+                LOG.info('AudioService')
+                self.audioservice.play(url, message.data['utterance'])
+            else:  # othervice use normal mp3 playback
+                LOG.info('playmp3')
+                self.process = play_mp3(url)
+
+        except Exception as e:
+            LOG.error("Error: {0}".format(e))
+
     @intent_handler(IntentBuilder("buildawall").
         require("buildawall").
         build())
@@ -205,8 +235,8 @@ class NoAgendaSkill(MycroftSkill):
             LOG.error("Error: {0}".format(e))
 
     @intent_handler(IntentBuilder("latest").
-        optionally("Play").
-        optionally("latest").
+        require("Play").
+        require("latest").
         require("NoAgenda").
         build())
     def handle_latest_intent(self, message):
@@ -270,7 +300,7 @@ class NoAgendaSkill(MycroftSkill):
 
 
     @intent_handler(IntentBuilder("third").
-        optionally("Play").
+        require("Play").
         require("3rd").
         require("NoAgenda").
         build())
@@ -306,7 +336,7 @@ class NoAgendaSkill(MycroftSkill):
         require("4th").
         require("NoAgenda").
         build())
-    def handle_third_intent(self, message):
+    def handle_fourth_intent(self, message):
         try:
             self.stop()
 
@@ -338,7 +368,7 @@ class NoAgendaSkill(MycroftSkill):
         require("5th").
         require("NoAgenda").
         build())
-    def handle_third_intent(self, message):
+    def handle_fifth_intent(self, message):
         try:
             self.stop()
 
@@ -349,6 +379,166 @@ class NoAgendaSkill(MycroftSkill):
 
             url = data.enclosures[0]['url']
             LOG.info('fifth')
+            LOG.info(url)
+
+            # After the intro, start the no agenda stream
+            # if audio service module is available use it
+            sleep(1.0)
+            wait_while_speaking()
+            if self.audioservice:
+                LOG.info('AudioService')
+                self.audioservice.play(url, message.data['utterance'])
+            else:  # othervice use normal mp3 playback
+                LOG.info('playmp3')
+                self.process = play_mp3(url)
+
+        except Exception as e:
+            LOG.error("Error: {0}".format(e))
+
+    @intent_handler(IntentBuilder("sixth").
+        optionally("Play").
+        require("6th").
+        require("NoAgenda").
+        build())
+    def handle_sixth_intent(self, message):
+        try:
+            self.stop()
+
+            self.speak_dialog('NoAgenda')
+            feeddata = feedparser.parse(self.url_rss)
+            data = feeddata.entries[5]
+            # Stop anything already playing
+
+            url = data.enclosures[0]['url']
+            LOG.info('sixth')
+            LOG.info(url)
+
+            # After the intro, start the no agenda stream
+            # if audio service module is available use it
+            sleep(1.0)
+            wait_while_speaking()
+            if self.audioservice:
+                LOG.info('AudioService')
+                self.audioservice.play(url, message.data['utterance'])
+            else:  # othervice use normal mp3 playback
+                LOG.info('playmp3')
+                self.process = play_mp3(url)
+
+        except Exception as e:
+            LOG.error("Error: {0}".format(e))
+
+    @intent_handler(IntentBuilder("seventh").
+        optionally("Play").
+        require("7th").
+        require("NoAgenda").
+        build())
+    def handle_seventh_intent(self, message):
+        try:
+            self.stop()
+
+            self.speak_dialog('NoAgenda')
+            feeddata = feedparser.parse(self.url_rss)
+            data = feeddata.entries[6]
+            # Stop anything already playing
+
+            url = data.enclosures[0]['url']
+            LOG.info('seventh')
+            LOG.info(url)
+
+            # After the intro, start the no agenda stream
+            # if audio service module is available use it
+            sleep(1.0)
+            wait_while_speaking()
+            if self.audioservice:
+                LOG.info('AudioService')
+                self.audioservice.play(url, message.data['utterance'])
+            else:  # othervice use normal mp3 playback
+                LOG.info('playmp3')
+                self.process = play_mp3(url)
+
+        except Exception as e:
+            LOG.error("Error: {0}".format(e))
+
+    @intent_handler(IntentBuilder("eighth").
+        optionally("Play").
+        require("8th").
+        require("NoAgenda").
+        build())
+    def handle_eighth_intent(self, message):
+        try:
+            self.stop()
+
+            self.speak_dialog('NoAgenda')
+            feeddata = feedparser.parse(self.url_rss)
+            data = feeddata.entries[7]
+            # Stop anything already playing
+
+            url = data.enclosures[0]['url']
+            LOG.info('eighth')
+            LOG.info(url)
+
+            # After the intro, start the no agenda stream
+            # if audio service module is available use it
+            sleep(1.0)
+            wait_while_speaking()
+            if self.audioservice:
+                LOG.info('AudioService')
+                self.audioservice.play(url, message.data['utterance'])
+            else:  # othervice use normal mp3 playback
+                LOG.info('playmp3')
+                self.process = play_mp3(url)
+
+        except Exception as e:
+            LOG.error("Error: {0}".format(e))
+
+    @intent_handler(IntentBuilder("ninth").
+        optionally("Play").
+        require("9th").
+        require("NoAgenda").
+        build())
+    def handle_ninth_intent(self, message):
+        try:
+            self.stop()
+
+            self.speak_dialog('NoAgenda')
+            feeddata = feedparser.parse(self.url_rss)
+            data = feeddata.entries[8]
+            # Stop anything already playing
+
+            url = data.enclosures[0]['url']
+            LOG.info('ninth')
+            LOG.info(url)
+
+            # After the intro, start the no agenda stream
+            # if audio service module is available use it
+            sleep(1.0)
+            wait_while_speaking()
+            if self.audioservice:
+                LOG.info('AudioService')
+                self.audioservice.play(url, message.data['utterance'])
+            else:  # othervice use normal mp3 playback
+                LOG.info('playmp3')
+                self.process = play_mp3(url)
+
+        except Exception as e:
+            LOG.error("Error: {0}".format(e))
+
+    @intent_handler(IntentBuilder("tenth").
+        optionally("Play").
+        require("10th").
+        require("NoAgenda").
+        build())
+    def handle_tenth_intent(self, message):
+        try:
+            self.stop()
+
+            self.speak_dialog('NoAgenda')
+            feeddata = feedparser.parse(self.url_rss)
+            data = feeddata.entries[9]
+            # Stop anything already playing
+
+            url = data.enclosures[0]['url']
+            LOG.info('tenth')
             LOG.info(url)
 
             # After the intro, start the no agenda stream
