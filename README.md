@@ -1,18 +1,25 @@
 ## No Agenda Show
+
 Plays the latest No Agenda show
 
 ## Description
-Plays the latest No Agenda show using Mycroft AI
+Teaches Mycroft AI about the the best podcast in the universe "The No Agenda Show".
+
+* "Hey Mycroft, Who is the best podcast in the Universe?"
 
 ## Examples
+* "What is the best podcast in the Universe?"
 * "Play the No Agenda show!"
-* "Start up the best podcast in the universe!"
 * "Initiate a random No Agenda show!"
 * "Fire up the penultimate No Agenda show!"
+* "Start up the best podcast in the universe!"
+* "What is the No Agenda show?"
 * "Load the third No Agenda show!"
 * "In the morning!"
+* "What is the in gitmo nation?"
 * "What's the latest in gitmo nation?"
 * "What's the latest No Agenda show?"
+* "random No Agenda show!"
 * "My millenials, stay woke!"
 * "I need karma!"
 * "I need pharma!"
