@@ -6,6 +6,7 @@ Plays the latest No Agenda show using Mycroft AI
 
 ## Examples
 * "Play the No Agenda show!"
+* "Play the best podcast in the universe!"
 * "Play a random No Agenda show!"
 * "Play the penultimate No Agenda show!"
 * "Play the third No Agenda show!"
