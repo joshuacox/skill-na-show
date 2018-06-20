@@ -1,9 +1,9 @@
-## No Agenda Show
+## [No Agenda Show](http://www.noagendashow.com/)
 
-Plays the latest No Agenda show
+Plays the latest [No Agenda Show](http://www.noagendashow.com/)
 
 ## Description
-Teaches Mycroft AI about the the best podcast in the universe "The No Agenda Show".
+Teaches Mycroft AI about the the best podcast in the universe ["No Agenda Show".](http://www.noagendashow.com/)
 
 * "Hey Mycroft, Who is the best podcast in the Universe?"
 
@@ -16,15 +16,15 @@ Teaches Mycroft AI about the the best podcast in the universe "The No Agenda Sho
 * "What is the No Agenda show?"
 * "Load the third No Agenda show!"
 * "In the morning!"
-* "What is the in gitmo nation?"
+* "What is Gitmo Nation?"
 * "What's the latest in gitmo nation?"
 * "What's the latest No Agenda show?"
 * "random No Agenda show!"
-* "My millenials, stay woke!"
-* "I need karma!"
-* "I need pharma!"
-* "Resist we much!"
-* "Build a wall!"
+* "My Millenials, Stay Woke!"
+* "I need Karma!"
+* "I need Pharma!"
+* "Resist We Much!"
+* "Build A Wall!"
 * "Any Collusion?"
 * "Play the fourth No Agenda show!"
 * "Load the fifth No Agenda show!"
