@@ -8,6 +8,7 @@ Teaches Mycroft AI about the the best podcast in the universe ["No Agenda Show".
 * "Hey Mycroft, Who is the best podcast in the Universe?"
 
 ## Examples
+* "Jack into the live No Agenda stream"
 * "What is the best podcast in the Universe?"
 * "Play the No Agenda show!"
 * "Initiate a random No Agenda show!"

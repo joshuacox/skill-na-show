@@ -683,6 +683,32 @@ class NoAgendaSkill(MycroftSkill):
                 LOG.info('playmp3')
                 self.process = play_mp3(url)
 
+    @intent_handler(IntentBuilder("live").
+        optionally("Live").
+        require("NoAgenda").
+        build())
+    def handle_live_intent(self, message):
+        try:
+            self.stop()
+
+            feeddata = feedparser.parse(self.url_rss)
+            data = feeddata.entries[14]
+            # Stop anything already playing
+
+            url = https://listen.noagendastream.com/noagenda.pls
+            LOG.info('live')
+            LOG.info(url)
+
+            # After the intro, start the no agenda stream
+            # if audio service module is available use it
+            wait_while_speaking()
+            if self.audioservice:
+                LOG.info('AudioService')
+                self.audioservice.play(url, message.data['utterance'])
+            else:  # othervice use normal mp3 playback
+                LOG.info('playmp3')
+                self.process = play_mp3(url)
+
         except Exception as e:
             LOG.error("Error: {0}".format(e))
 
